@@ -1,4 +1,4 @@
-package com.product_hibernate;
+package com.product;
 
 import static org.junit.jupiter.api.Assertions.*;
 

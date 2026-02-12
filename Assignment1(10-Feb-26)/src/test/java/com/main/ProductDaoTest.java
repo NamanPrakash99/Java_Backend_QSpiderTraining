@@ -1,10 +1,10 @@
-package com.practice;
+package com.main;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Product {
+public class ProductDaoTest {
 	@Id
 	int id;
 	String name;

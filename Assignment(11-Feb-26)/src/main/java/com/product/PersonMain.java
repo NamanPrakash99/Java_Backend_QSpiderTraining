@@ -1,5 +1,6 @@
 package com.product;
 
+
 public class PersonMain {
 
     public static void main(String[] args) {
@@ -26,5 +27,4 @@ public class PersonMain {
         System.out.println(dao.deleteById(1));
     }
 }
-
 

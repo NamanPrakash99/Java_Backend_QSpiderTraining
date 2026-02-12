@@ -1,4 +1,4 @@
-package com.practice;
+package com.main;
 
 import javax.persistence.*;
 import java.util.List;

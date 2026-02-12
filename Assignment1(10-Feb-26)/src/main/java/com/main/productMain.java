@@ -1,4 +1,6 @@
-package com.practice;
+package com.main;
+
+
 
 public class productMain {
 	public static void main(String[] args) {
