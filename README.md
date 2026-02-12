@@ -1,12 +1,14 @@
-Java Advanced Workspace
+<h1 align="center">☕ Java Advanced Workspace ☕</h1>
 
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white)](https://www.java.com)
-![JDK 21](https://img.shields.io/badge/JDK-21-blue?style=flat-square&logo=openjdk&logoColor=white)
-![Eclipse](https://img.shields.io/badge/IDE-Eclipse-2C2255?style=flat-square&logo=eclipseide&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
-![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-![Active](https://img.shields.io/badge/Status-Active-success?style=flat-square)
+<p align="center">
+  <a href="https://www.java.com"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"></a>
+  <img src="https://img.shields.io/badge/JDK-21-blue?style=for-the-badge&logo=openjdk&logoColor=white" alt="JDK 21">
+  <img src="https://img.shields.io/badge/IDE-Eclipse-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white" alt="Eclipse">
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven">
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Active">
+</p>
 
 This workspace contains a collection of Java projects focused on advanced concepts, including JDBC, Hibernate ORM, and JUnit testing. It serves as a comprehensive repository for learning and practicing database connectivity and object-relational mapping in Java.
 
