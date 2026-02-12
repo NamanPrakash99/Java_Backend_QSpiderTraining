@@ -1,0 +1,49 @@
+package com.connectdb;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class StepsToconnectDb {
+	public static void main(String[] args) {
+		String url = "jdbc:postgresql://localhost:5432/College";
+		String username = "postgres";
+		String pwd = "2580";
+		// step:1 load the driver class
+
+		try {
+			Class.forName("org.postgresql.Driver");// this is used to load the 3rd party jar file present in maven
+													
+
+			// step2: to establish connection
+
+			Connection connect = DriverManager.getConnection(url, username, pwd);
+
+			String ins = "insert into student values(2,'Don','female')";
+//			String upd = "update student set name='Shreya' where id=2";
+			String upd = "update student set branch='IT' where id=2";
+
+			String del = "delete from student where id=2";
+			
+			// create statement
+			Statement stmt=connect.createStatement();
+			
+//			stmt.execute(ins);
+			stmt.execute(upd);
+			stmt.execute(del);
+			connect.close();
+			
+//			System.out.println("Data inserted");
+			System.out.println("Data updated");
+			System.out.println("Data deleted");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		// this is used to load the 3rd party jar file present in maven dependencies
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package com.product_hibernate;
+
+import com.product.Calculator;
+
+public class CalculatorTest {
+	
+	public void divideTest() {
+		Calculator c=new Calculator();
+		
+		c.divide(10, 2);
+	}
+}

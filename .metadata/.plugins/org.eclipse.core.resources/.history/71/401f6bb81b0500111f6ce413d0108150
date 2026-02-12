@@ -1,0 +1,15 @@
+package com.prac;
+
+import java.util.ArrayList;
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class EmployeeTest {
+
+    @Test
+    public void testEmptyList() {
+        List<Employee1> list = new ArrayList<>();
+        assertTrue(Employee1.validateEmployees(list));
+    }
+}

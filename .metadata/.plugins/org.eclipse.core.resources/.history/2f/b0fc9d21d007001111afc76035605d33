@@ -1,0 +1,37 @@
+package com.product;
+
+public class PersonMain {
+
+    public static void main(String[] args) {
+
+        PersonDao dao = new PersonDao();
+
+        // CREATE
+        Person p = new Person();
+        p.setId(101);
+        p.setName("Naman");
+        p.setDob("10-05-2003");
+        p.setAddress("Delhi");
+        p.setPincode(110001);
+
+        String res = dao.insertPerson(p);
+        System.out.println(res);
+
+
+        // READ
+        Person found = dao.findById(101);
+        System.out.println(found);
+
+
+        // UPDATE
+        found.setAddress("Mumbai");
+        dao.update(found);
+        System.out.println("Updated: " + dao.findById(101));
+
+
+        // DELETE
+        String del = dao.deleteById(101);
+        System.out.println(del);
+    }
+}
+

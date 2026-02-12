@@ -2,6 +2,19 @@
 
 This workspace contains a collection of Java projects focused on advanced concepts, including JDBC, Hibernate ORM, and JUnit testing. It serves as a comprehensive repository for learning and practicing database connectivity and object-relational mapping in Java.
 
+## Project Structure
+
+```text
+📂 Java Advanced Workspace
+├── 🧪 Junit_Testing
+├── ☕ basicsOfJava
+├── 🗄️ basicsofJdbc
+├── 🏢 com.capgemini
+├── ❄️ hibernate_basics
+├── 📁 learn_jdbc
+└── 📦 product_hibernate
+```
+
 ## Projects Overview
 
 ### 1. [com.capgemini](file:///c:/Users/Naman%20Prakash/eclipseADV-workspace/com.capgemini)

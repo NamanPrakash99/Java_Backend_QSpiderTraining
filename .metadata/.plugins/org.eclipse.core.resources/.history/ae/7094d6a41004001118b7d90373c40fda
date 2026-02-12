@@ -1,0 +1,17 @@
+package com.prac;
+
+public class Employee {
+	private Integer id;
+	private String name;
+	private Integer age;
+	private String dept;
+	public Employee(int id, String name, int age, String dept) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.dept = dept;
+	}
+	
+
+}

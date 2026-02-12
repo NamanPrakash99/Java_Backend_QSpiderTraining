@@ -1,0 +1,50 @@
+package com.prac;
+import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ToReadData {
+	
+	public static void main(String[] args) {
+		String url = "jdbc:postgresql://localhost:5432/College";
+		String username = "postgres";
+		String pwd = "2580";
+		
+		Scanner sc=new Scanner(System.in);
+		try {
+			Class.forName("org.postgresql.Driver");
+			
+			Connection connect = DriverManager.getConnection(url, username, pwd);
+			
+			String ins = "insert into student values(?, ?, ?, ?)";
+			String sel = "select * from student where id = ?";
+			
+//			Statement stmt = connect.createStatement();
+//			insertData(stmt);
+//			selectData(stmt, sel);
+			
+			PreparedStatement ps = connect.prepareStatement(ins); // dynamic query and for reusability
+			
+			int id = sc.nextInt();
+			ps.setInt(1, id);
+			sc.nextLine();
+			String name = sc.nextLine();
+			ps.setString(2, name);
+			String email = sc.nextLine();
+			ps.setString(3, email);
+			String gender = sc.nextLine();
+			ps.setString(4, gender);
+			
+			ps.execute();
+			System.out.println("done");
+			connect.close();
+			
+		}catch(ClassNotFoundException cnfe) {
+			cnfe.printStackTrace();
+		}catch(SQLException s) {
+			s.printStackTrace();
+		}
+	}
+}

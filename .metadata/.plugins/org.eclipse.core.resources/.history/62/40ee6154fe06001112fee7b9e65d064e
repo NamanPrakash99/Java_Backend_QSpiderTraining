@@ -1,0 +1,17 @@
+package com.product;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class ProductDao {
+	
+	public void insertProduct(Product p) {
+		 EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
+
+	}
+	
+	public void deleteById(int id) {
+		
+	}
+
+}
