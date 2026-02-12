@@ -15,13 +15,13 @@ This workspace contains a collection of Java projects focused on advanced concep
 ```
 Advanced_Java_Training/
 │
-├── 📁 Junit_Testing/           
-├── 📁 basicsOfJava/             
-├── 📁 basicsofJdbc/            
-├── 📁 com.capgemini/            
-├── 📁 hibernate_basics/         
-├── 📁 learn_jdbc/               
-└── 📁 product_hibernate/        
+├── 📁 Junit_Testing/
+├── 📁 basicsOfJava/
+├── 📁 basicsofJdbc/
+├── 📁 com.capgemini/
+├── 📁 hibernate_basics/
+├── 📁 learn_jdbc/
+└── 📁 product_hibernate/
 ```
 
 📋 Projects Overview
@@ -107,19 +107,6 @@ mvn test
 - Many projects include a Main or Dao class with a public static void main method
 - Run these directly to demonstrate functionality
 
----
-
-📝 License
-
-This project is for educational purposes.
-
----
-
-👤 Author
-
-Naman Prakash
-
----
 
 <div align="center">
   <sub>Built with ❤️ using Java, Hibernate, and PostgreSQL</sub>
