@@ -1,5 +1,7 @@
 # Java Advanced Workspace
 
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white)](https://www.java.com)
+
 This workspace contains a collection of Java projects focused on advanced concepts, including JDBC, Hibernate ORM, and JUnit testing. It serves as a comprehensive repository for learning and practicing database connectivity and object-relational mapping in Java.
 
 ## Project Structure
