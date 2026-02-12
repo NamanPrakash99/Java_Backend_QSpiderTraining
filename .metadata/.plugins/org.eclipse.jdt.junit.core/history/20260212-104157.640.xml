@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PersonDaoTest" project="product_hibernate" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="com.product_hibernate.PersonDaoTest" time="3.118" displayname="PersonDaoTest" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]">
+    <testcase name="findExceptionTest" classname="com.product_hibernate.PersonDaoTest" time="1.774" displayname="findExceptionTest()" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]/[method:findExceptionTest()]"/>
+    <testcase name="findTest" classname="com.product_hibernate.PersonDaoTest" time="0.276" displayname="findTest()" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]/[method:findTest()]"/>
+    <testcase name="insertNullTest" classname="com.product_hibernate.PersonDaoTest" time="0.199" displayname="insertNullTest()" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]/[method:insertNullTest()]"/>
+    <testcase name="updateTest" classname="com.product_hibernate.PersonDaoTest" time="0.218" displayname="updateTest()" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]/[method:updateTest()]"/>
+    <testcase name="deleteExceptionTest" classname="com.product_hibernate.PersonDaoTest" time="0.222" displayname="deleteExceptionTest()" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]/[method:deleteExceptionTest()]"/>
+    <testcase name="insertTest" classname="com.product_hibernate.PersonDaoTest" time="0.203" displayname="insertTest()" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]/[method:insertTest()]"/>
+    <testcase name="deleteTest" classname="com.product_hibernate.PersonDaoTest" time="0.222" displayname="deleteTest()" uniqueid="[engine:junit-jupiter]/[class:com.product_hibernate.PersonDaoTest]/[method:deleteTest()]"/>
+  </testsuite>
+</testrun>

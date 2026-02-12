@@ -1,0 +1,39 @@
+package com.connectdb;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EmployeeData {
+
+    static String url = "jdbc:postgresql://localhost:5432/College";
+    static String username = "postgres";
+    static String pwd = "2580";
+
+    public static void main(String[] args) {
+
+        try {
+            Class.forName("org.postgresql.Driver");
+
+            Connection connect = DriverManager.getConnection(url, username, pwd);
+
+            String ins =
+                "insert into employee values " +
+                "(1,'Naman',760000)," +
+                "(2,'Divyansh',67000)," +
+                "(3,'Ravi',87000)";
+
+            Statement stmt = connect.createStatement();
+
+            stmt.executeUpdate(ins);
+
+            System.out.println("Data inserted successfully");
+
+            connect.close();
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

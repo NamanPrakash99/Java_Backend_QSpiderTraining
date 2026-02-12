@@ -1,0 +1,11 @@
+package com.connectdatabase;
+
+public class Positive {
+	public Boolean isPositive(int s) {
+		if(s>0) {
+			return "Positive";
+		}else {
+			return "Negative";
+		}
+	}
+}

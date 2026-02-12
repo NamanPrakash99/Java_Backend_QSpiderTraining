@@ -1,0 +1,126 @@
+package com.product_hibernate;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.product.Product;
+import com.product.ProductDao;
+
+// ctrl+shift+o --> import shortcut
+
+
+public class ProductDaoTest {
+
+	
+	//EMF
+	//EM
+	//ET
+	static EntityManagerFactory emf;
+	
+	static EntityManager em;
+	
+//	@BeforeAll
+//	public static void initEmf() {
+//		System.out.println("Init EMF");
+//		emf = Persistence.createEntityManagerFactory("postgres");
+//	}
+	
+	
+//	@BeforeEach
+//	public void initEm() {
+//		em=emf.createEntityManager();
+//	}
+	
+	
+//	@Test
+//	public static void insertProductTest() {
+//		System.out.println("Product Inserted");
+//		ProductDao dao=new ProductDao();
+//		Product product=new Product();
+//		product.setId(6);
+//		product.setName("Pencil");
+//		product.setQuantity(5);
+//		dao.insertProduct(product);
+//	}
+	
+	
+//	@Test
+//	public void findById() {
+//		System.out.println("Product Find");
+//		ProductDao dao=new ProductDao();
+//		Product p=dao.findById(1);
+//		assertNotNull(p);
+//	}
+	
+	
+	// foe the delete 
+	@Test
+	public void testDeleteById() {
+
+	    ProductDao dao = new ProductDao();
+	    Product p = new Product();
+	    p.setId(1);
+	    p.setName("Pen");
+	    p.setQuantity(5);
+
+	    dao.insertProduct(p);
+
+	    String result = dao.deleteById(1);
+
+	    assertEquals("Deleted", result);
+	}
+	 
+	@Test
+	public void testDeleteById_NotExists() {
+
+	    ProductDao dao = new ProductDao();
+	    String result = dao.deleteById(100);
+
+	    assertEquals("Data Not Exist", result);
+	}
+	
+	
+	// Find
+	
+	@Test
+	public void testFindById() {
+
+	    ProductDao dao = new ProductDao();
+	    Product p = new Product();
+	    
+	    p.setId(10);
+	    p.setName("Book");
+	    p.setQuantity(3);
+
+	    dao.insertProduct(p);
+
+	    Product found = dao.findById(10);
+
+	    assertNotNull(found);
+	}
+
+
+	
+	
+//	@AfterEach
+//	public static void destroyEm() {
+//		emf.close();
+//	}
+	
+	
+//	@AfterAll
+//	public static void destroyEmf() {
+//		emf.close();
+//	}
+	
+}

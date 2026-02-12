@@ -1,0 +1,50 @@
+package com.prac;
+import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class ToReadData {
+	
+	public static void main(String[] args) {
+		String url = "jdbc:postgresql://localhost:5432/College";
+		String username = "postgres";
+		String pwd = "2580";
+		
+		Scanner sc=new Scanner(System.in);
+		try {
+			Class.forName("org.postgresql.Driver");
+			// from jdbc 4 onward we can ignore this class anme
+			
+			Connection connect=DriverManager.getConnection(url,username,pwd);
+			
+			String sql="insert into students values(?,?,?)";
+			
+			
+			PreparedStatement pstm=connect.prepareStatement(sql);
+			
+			System.out.println("Enter Id: ");
+			int id=sc.nextInt();
+			pstm.setInt(1, id);
+			
+			System.out.println("Enter Name: ");
+			String name=sc.next();
+			pstm.setString(2, name);
+			
+			System.out.println("Enter Branch: ");
+			String branch=sc.next();
+			pstm.setString(3, branch);
+			
+			
+			pstm.execute();
+			
+			connect.close();
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

@@ -1,0 +1,8 @@
+package com.connectdatabase;
+
+public class PositiveTest {
+	public void isPositive(int s) {
+		Positive p=new Positive();
+		assertTrue(isPositive(s));
+	}
+}

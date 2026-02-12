@@ -1,0 +1,129 @@
+package com.product_hibernate;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.junit.jupiter.api.*;
+
+import com.person.Person;
+import com.person.PersonDao;
+
+public class PersonDaoTest {
+
+    static EntityManagerFactory emf;
+
+    @BeforeAll
+    static void setup() {
+        emf = Persistence.createEntityManagerFactory("postgres");
+    }
+
+    @AfterAll
+    static void cleanup() {
+        emf.close();
+    }
+
+    // INSERT SUCCESS
+    @Test
+    void insertPersonTest() {
+        PersonDao dao = new PersonDao();
+
+        Person p = new Person();
+        p.setId(1);
+        p.setName("Naman");
+        p.setDob("10-05-2003");
+        p.setAddress("Delhi");
+        p.setPincode(110001);
+
+        String res = dao.insertPerson(p);
+
+        assertEquals("Data Inserted", res);
+    }
+
+    // INSERT NULL
+    @Test
+    void insertNullTest() {
+        PersonDao dao = new PersonDao();
+        assertEquals("Illegal Argument", dao.insertPerson(null));
+    }
+
+    // FIND SUCCESS
+    @Test
+    void findByIdTest() {
+        PersonDao dao = new PersonDao();
+
+        Person p = new Person();
+        p.setId(2);
+        p.setName("Rahul");
+        p.setDob("01-01-2000");
+        p.setAddress("Mumbai");
+        p.setPincode(400001);
+
+        dao.insertPerson(p);
+
+        Person found = dao.findById(2);
+
+        assertNotNull(found);
+        assertEquals("Rahul", found.getName());
+    }
+
+    // FIND EXCEPTION
+    @Test
+    void findExceptionTest() {
+        PersonDao dao = new PersonDao();
+
+        assertThrows(IllegalArgumentException.class,
+                () -> dao.findById(999));
+    }
+
+    // UPDATE
+    @Test
+    void updateTest() {
+        PersonDao dao = new PersonDao();
+
+        Person p = new Person();
+        p.setId(3);
+        p.setName("Amit");
+        p.setDob("02-02-1999");
+        p.setAddress("Pune");
+        p.setPincode(411001);
+
+        dao.insertPerson(p);
+
+        p.setName("Amit Updated");
+        dao.update(p);
+
+        Person updated = dao.findById(3);
+
+        assertEquals("Amit Updated", updated.getName());
+    }
+
+    // DELETE SUCCESS
+    @Test
+    void deleteTest() {
+        PersonDao dao = new PersonDao();
+
+        Person p = new Person();
+        p.setId(4);
+        p.setName("DeleteUser");
+        p.setDob("05-05-1995");
+        p.setAddress("Chennai");
+        p.setPincode(600001);
+
+        dao.insertPerson(p);
+
+        String res = dao.deleteById(4);
+
+        assertEquals("Deleted", res);
+    }
+
+    // DELETE EXCEPTION
+    @Test
+    void deleteExceptionTest() {
+        PersonDao dao = new PersonDao();
+
+        assertThrows(IllegalArgumentException.class,
+                () -> dao.deleteById(888));
+    }
+}

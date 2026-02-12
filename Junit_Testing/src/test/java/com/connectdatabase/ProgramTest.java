@@ -1,0 +1,48 @@
+package com.connectdatabase;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+public class ProgramTest {
+	
+//	@ParameterizedTest
+//	@ValueSource(strings= {"tenet","naman","radar","aba","abcd"})
+//	public void isPalindromeTest(String str) {
+//		Program p=new Program();
+//		assertTrue(p.isPalindrome(str));
+//	}
+	
+//	@ParameterizedTest
+//	@ValueSource(ints= {1,2,4,5,6,-1})
+//	public void isPositiveTest(int s) {
+//		Program p=new Program()
+//		assertTrue(p.isPositive(s));
+//	}
+//	
+	
+	
+//	@ParameterizedTest
+//	@CsvSource({
+//		"1,2,3",    //->one test case
+//		"5,5,10",   //->one test case
+//		"5,3,8"
+//	})
+//	public void addTest(int a,int b,int expectedResult) {
+//		Program p=new Program();
+//		int actualResult=p.add(a, b);
+//		assertEquals(expectedResult,actualResult);
+//	}
+	
+	@ParameterizedTest
+	@CsvFileSource(resources="/capgemini.csv",numLinesToSkip = 1)
+	public void evenoroddTest(String input,String expected) {
+		EvenOrOdd eoo=new EvenOrOdd();
+		String actualres=eoo.evenOrOdd(Integer.parseInt(input));
+		assertEquals(expected,actualres);
+	}
+}

@@ -1,0 +1,13 @@
+package com.product;
+
+public class Calculator {
+	
+	
+	public void divide(int a,int b) {
+		if(b==0) {
+			return 0;
+		}else {
+			System.out.println(a/b);
+		}
+	}
+}

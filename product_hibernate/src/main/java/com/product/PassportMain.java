@@ -1,0 +1,29 @@
+package com.product;
+
+public class PassportMain {
+
+    public static void main(String[] args) {
+
+        PassportDao dao = new PassportDao();
+
+        Passport p = new Passport();
+        p.setPassportNo(101);
+        p.setName("Naman");
+        p.setGender("Male");
+        p.setAddress("Delhi");
+        p.setNoOfTravel(3);
+
+        System.out.println(dao.insertPassport(p));
+
+        Passport found = dao.findById(101);
+        System.out.println(found);
+
+        found.setAddress("Mumbai");
+        dao.update(found);
+
+        System.out.println("Updated: " + dao.findById(101));
+
+        System.out.println(dao.deleteById(101));
+    }
+}
+

@@ -1,0 +1,9 @@
+package com.connectdatabase;
+
+public class EvenOrOdd {
+	if(a%2==0) {
+		
+	}else {
+		
+	}
+}
