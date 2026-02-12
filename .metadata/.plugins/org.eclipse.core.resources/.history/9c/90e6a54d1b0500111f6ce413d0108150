@@ -1,9 +1,0 @@
-package com.prac;
-
-public class EmployeeTest {
-	 @Test
-	    public void testEmptyList() {
-	        List<Employee> list = new ArrayList<>();
-	        assertFalse(EmployeeValidator.validateEmployees(list));
-	    }
-}

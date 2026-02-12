@@ -1,9 +1,11 @@
 .metadata/
-gitignore.txt
-bin/
-.recommenders/
 .settings/
 .project
 .classpath
+.gitignore
+
+target/
+bin/
+
 *.class
-.factorypath
+*.log
