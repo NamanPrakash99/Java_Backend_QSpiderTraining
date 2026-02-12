@@ -4,15 +4,15 @@ This workspace contains a collection of Java projects focused on advanced concep
 
 ## Project Structure
 
-```text
-📂 Java Advanced Workspace
-├── 🧪 Junit_Testing
-├── ☕ basicsOfJava
-├── 🗄️ basicsofJdbc
-├── 🏢 com.capgemini
-├── ❄️ hibernate_basics
+```
+📂 Advanced_Java_Training
+├── 📁 Junit_Testing
+├── 📁 basicsOfJava
+├── 📁 basicsofJdbc
+├── 📁 com.capgemini
+├── 📁 hibernate_basics
 ├── 📁 learn_jdbc
-└── 📦 product_hibernate
+└── 📁 product_hibernate
 ```
 
 ## Projects Overview
