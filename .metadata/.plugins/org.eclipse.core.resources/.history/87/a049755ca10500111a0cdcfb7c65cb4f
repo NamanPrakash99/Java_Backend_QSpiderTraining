@@ -1,7 +1,0 @@
-package com.connectdb;
-
-public class FindStudentData {
-	public static void main(String[] args) {
-		
-	}
-}
