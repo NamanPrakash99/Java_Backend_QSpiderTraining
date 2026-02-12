@@ -110,5 +110,5 @@ mvn test
 
 
 <div align="center">
-  <sub><h4>Built with ❤️ using Java, Hibernate, and PostgreSQL</h4></sub>
+  <sub><h3>Built with ❤️ using Java, Hibernate, and PostgreSQL</h3></sub>
 </div>
