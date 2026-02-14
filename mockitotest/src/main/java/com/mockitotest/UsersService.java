@@ -6,7 +6,7 @@ public class UsersService {
 	private UsersDao dao;
 	
 	public UsersService(UsersDao dao) {
-		this.dao=dao=dao;
+		this.dao=dao;
 	}
 	
 	public String typeOfUser(int id) {
