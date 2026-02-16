@@ -1,19 +1,32 @@
 package com.manyToone_Mapping;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
 public class Employee {
+	
 	@Id
+	
+	// for every object it will generate a unique id default will start form 1
+	@GeneratedValue(strategy = GenerationType.IDENTITY)   
 	private int id;
 	private String name;
-	private Double salary;
+	private int salary;
 	private String designation;
 	
 	@ManyToOne
-    private Department department;
+    private Department dept;
+	
+	public Department getDept() {
+		return dept;
+	}
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
 	
 	public int getId() {
 		return id;
@@ -27,10 +40,10 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Double getSalary() {
+	public int getSalary() {
 		return salary;
 	}
-	public void setSalary(Double salary) {
+	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 	public String getDesignation() {

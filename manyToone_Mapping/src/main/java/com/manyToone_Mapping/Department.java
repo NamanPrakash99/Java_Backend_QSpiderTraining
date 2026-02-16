@@ -1,12 +1,19 @@
 package com.manyToone_Mapping;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Department {
+	
 	@Id
+	
+	// Sequence also start form 1 but we can assign range 
+	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "number_sequence")
+	@SequenceGenerator(name = "number",sequenceName ="number_sequence", initialValue =  100,allocationSize = 1)
 	private int id;
 	private String name;
 	private String manager_name;

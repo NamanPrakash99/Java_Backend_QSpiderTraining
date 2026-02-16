@@ -4,35 +4,51 @@ import java.util.List;
 
 public class HospitalService {
 
-    PatientDao patientDAO = new PatientDao();
-    DoctorDao doctorDAO = new DoctorDao();
-    AppointmentDao appointmentDAO = new AppointmentDao();
+    private PatientDao patientDAO = new PatientDao();
+    private DoctorDao doctorDAO = new DoctorDao();
+    private AppointmentDao appointmentDAO = new AppointmentDao();
 
+    // Register patient
     public void registerPatient(Patient p){
         patientDAO.savePatient(p);
     }
 
-    public void addAppointments(int docId,List<Appointment> list){
-        Doctor d = doctorDAO.findDoctor(docId);
-        d.setAppointments(list);
-        doctorDAO.saveDoctor(d);
+    // Add appointments to doctor
+    public void addAppointments(int doctorId, List<Appointment> appointments){
+        Doctor d = doctorDAO.findDoctor(doctorId);
+
+        if(d != null){
+            d.setAppointments(appointments);
+            doctorDAO.saveDoctor(d);
+        } else {
+            System.out.println("Doctor not found");
+        }
     }
 
-    public void assignPatient(Appointment a,Long pid){
-        Patient p = patientDAO.findPatient(pid);
-        a.setPatient(p);
-        appointmentDAO.saveAppointment(a);
+    // Assign patient to appointment
+    public void assignPatient(Appointment a, int patientId){
+        Patient p = patientDAO.findPatient(patientId);
+
+        if(p != null){
+            a.setPatient(p);
+            appointmentDAO.saveAppointment(a);
+        } else {
+            System.out.println("Patient not found");
+        }
     }
 
-    public void updateFee(Long id,double fee){
-        appointmentDAO.updateFee(id,fee);
+    // Update fee
+    public void updateFee(int appointmentId,double fee){
+        appointmentDAO.updateFee(appointmentId,fee);
     }
 
+    // Fetch doctor
     public Doctor fetchDoctor(int id){
         return doctorDAO.findDoctor(id);
     }
 
-    public void deletePatient(Long id){
+    // Delete patient
+    public void deletePatient(int id){
         patientDAO.deletePatient(id);
     }
 }
