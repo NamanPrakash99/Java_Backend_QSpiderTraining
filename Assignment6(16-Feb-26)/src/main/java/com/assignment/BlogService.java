@@ -93,7 +93,6 @@ public class BlogService {
 public List<Post> fetchPostsByUser(int userId) {
     EntityManager em = emf.createEntityManager();
 
-<<<<<<< HEAD
     Query query = em.createQuery("FROM Post p WHERE p.author.id = ?1");
     query.setParameter(1, userId);
 
@@ -101,7 +100,8 @@ public List<Post> fetchPostsByUser(int userId) {
 
     em.close();
     return list;
-=======
+
+
 // Fetch posts by user
 public List<Post> fetchPostsByUser(int userId) {
     EntityManager em = emf.createEntityManager();
@@ -140,7 +140,6 @@ public List<Comment> fetchCommentsByUser(int userId) {
     em.close();
     return list;
     }
->>>>>>> 4cea02c (updated)
 }
 
 // Find comment by post
@@ -169,3 +168,4 @@ public List<Comment> fetchCommentsByUser(int userId) {
     return list;
 }
 
+}
