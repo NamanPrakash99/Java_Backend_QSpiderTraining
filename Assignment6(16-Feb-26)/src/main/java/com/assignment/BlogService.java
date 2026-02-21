@@ -87,52 +87,44 @@ public class BlogService {
 
         em.close();
     }
+
     
+// Fetch posts by user
+public List<Post> fetchPostsByUser(int userId) {
+    EntityManager em = emf.createEntityManager();
 
-    // find post by user
-    public List<Post> fetchPostsByUser(int userId){
-        EntityManager em = emf.createEntityManager();
+    Query query = em.createQuery("FROM Post p WHERE p.author.id = ?1");
+    query.setParameter(1, userId);
 
-        TypedQuery<Post> query =
-                em.createQuery("FROM Post p WHERE p.author.id=?1", Post.class);
+    List<Post> list = (List<Post>) query.getResultList();
 
-        query.setParameter(1, userId);
-
-        List<Post> list = query.getResultList();
-
-        em.close();
-        return list;
-    }
-    
-
-    // find comment by post
-    public List<Comment> fetchCommentsByPost(int postId){
-        EntityManager em = emf.createEntityManager();
-
-        TypedQuery<Comment> query =
-                em.createQuery("FROM Comment c WHERE c.post.id=?1", Comment.class);
-
-        query.setParameter(1, postId);
-
-        List<Comment> list = query.getResultList();
-
-        em.close();
-        return list;
-    }
-    
-
-    // find comment by user
-    public List<Comment> fetchCommentsByUser(int userId){
-        EntityManager em = emf.createEntityManager();
-
-        TypedQuery<Comment> query =
-                em.createQuery("FROM Comment c WHERE c.author.id=?1", Comment.class);
-
-        query.setParameter(1, userId);
-
-        List<Comment> list = query.getResultList();
-
-        em.close();
-        return list;
-    }
+    em.close();
+    return list;
 }
+
+// Find comment by post
+public List<Comment> fetchCommentsByPost(int postId) {
+    EntityManager em = emf.createEntityManager();
+
+    Query query = em.createQuery("FROM Comment c WHERE c.post.id = ?1");
+    query.setParameter(1, postId);
+
+    List<Comment> list = (List<Comment>) query.getResultList();
+
+    em.close();
+    return list;
+}
+
+// Find comment by user
+public List<Comment> fetchCommentsByUser(int userId) {
+    EntityManager em = emf.createEntityManager();
+
+    Query query = em.createQuery("FROM Comment c WHERE c.author.id = ?1");
+    query.setParameter(1, userId);
+
+    List<Comment> list = (List<Comment>) query.getResultList();
+
+    em.close();
+    return list;
+}
+
