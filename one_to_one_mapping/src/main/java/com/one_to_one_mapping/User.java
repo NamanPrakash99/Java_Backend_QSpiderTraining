@@ -10,8 +10,8 @@ public class User {
 	public static void main(String[] args) {
 
 //		insertCarAndEngine();
-//		findByCarId();
-		deleteEngine();
+		findByCarId();
+//		deleteEngine();
 
 	}
 	
@@ -42,6 +42,10 @@ public class User {
 		EntityTransaction et = em.getTransaction();
 
 		Car c = em.find(Car.class, 1);
+		em.clear();
+		System.out.println("=========================");
+		Car c1 = em.find(Car.class, 1);
+
 		
 		System.out.println(c);
 		System.out.println(c.getEngine().getCc());

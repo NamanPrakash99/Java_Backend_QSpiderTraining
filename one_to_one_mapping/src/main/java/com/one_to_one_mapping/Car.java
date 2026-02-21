@@ -1,6 +1,7 @@
 package com.one_to_one_mapping;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
@@ -15,7 +16,7 @@ public class Car {
 	private String modelYear;
 	private double price;
 	
-	@OneToOne
+	@OneToOne(fetch=FetchType.LAZY)     // default is- LAZY
 	private Engine engine;
 	
 	

@@ -1,6 +1,7 @@
 package com.manyToone_Mapping;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,7 +19,7 @@ public class Employee {
 	private int salary;
 	private String designation;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY) 
     private Department dept;
 	
 	public Department getDept() {
