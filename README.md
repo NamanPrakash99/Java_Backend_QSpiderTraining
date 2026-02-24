@@ -21,99 +21,16 @@
 
 ## 📝 Assignments
 
-<table>
-<tr>
-<td width="50%">
-
-### 📦 Assignment 1 — Product CRUD
-**`10-Feb-2026`** &nbsp; &nbsp; ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-Hibernate-based **Product** entity with full DAO layer and JUnit test coverage. Demonstrates `@Entity`, `@Id`, CRUD operations, and EntityManager lifecycle.
-
-<sub>📂 `Assignment1(10-Feb-26)/`</sub>
-
-</td>
-<td width="50%">
-
-### 🧑‍🤝‍🧑 Assignment 2 — Person & Passport (One-to-One)
-**`11-Feb-2026`** &nbsp; &nbsp; ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-One-to-One mapping between **Person** and **Passport** entities with separate DAO layers and unit tests for both entities.
-
-<sub>📂 `Assignment2(11-Feb-26)/`</sub>
-
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-
-### 🎓 Assignment 3 — Student Hibernate
-**`12-Feb-2026`** &nbsp; &nbsp; ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-Student entity with Hibernate DAO pattern. Includes **StudentDao** for persistence operations and corresponding test suite.
-
-<sub>📂 `Assignment3(12-Feb-26)/`</sub>
-
-</td>
-<td width="50%">
-
-### 🧪 Assignment 4a — Mockito Testing
-**`13-Feb-2026`** &nbsp; &nbsp; ![Mockito](https://img.shields.io/badge/Mockito-78A641?style=flat-square) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-Mockito-based test suite for a **PriceService** that depends on a **DiscountRepo**. Demonstrates mocking, stubbing, and verification of service-layer logic.
-
-<sub>📂 `Assignment4(13-Feb-26)Mockito/`</sub>
-
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-
-### 🏠 Assignment 4b — Student-Hostel-Aadhar Mapping
-**`13-Feb-2026`** &nbsp; &nbsp; ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-Multi-entity Hibernate project: **Studentuser ↔ HostelRoom** (One-to-One) and **Studentuser ↔ AadharCard** (One-to-One) mappings with test verification.
-
-<sub>📂 `Assignment4(13-Feb-26)hibernate/`</sub>
-
-</td>
-<td width="50%">
-
-### 🏫 Assignment 5a — University System
-**`14-Feb-2026`** &nbsp; &nbsp; ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-Full university domain model: **Course**, **Instructor**, **InstructorProfile**, and **Enrollment** entities. Implements One-to-One, One-to-Many, and service-layer patterns with a **UniversityService** and DAO classes.
-
-<sub>📂 `Assignment5(14-Feb-26)University/`</sub>
-
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-
-### 🏥 Assignment 5b — Hospital One-to-Many
-**`14-Feb-2026`** &nbsp; &nbsp; ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-Hospital domain with **Doctor → Patient → Appointment → MedicalRecord** relationships. Demonstrates One-to-Many and Many-to-One mappings with DAO layer and test coverage.
-
-<sub>📂 `Assignment5(14-Feb-26)oneTomany/`</sub>
-
-</td>
-<td width="50%">
-
-### 📝 Assignment 6 — Blog Platform
-**`16-Feb-2026`** &nbsp; &nbsp; ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat-square&logo=junit5&logoColor=white)
-
-Complete blogging platform: **User**, **Post**, and **Comment** entities. Full **BlogService** with user registration, post CRUD, commenting, and JPQL queries for fetching posts/comments by user or post.
-
-<sub>📂 `Assignment6(16-Feb-26)/`</sub>
-
-</td>
-</tr>
-</table>
+| # | Assignment | Date | Stack | Description |
+|:-:|------------|------|-------|-------------|
+| 1 | 📦 **Product CRUD** | `10-Feb` | Hibernate · JUnit | Product entity with DAO layer, CRUD ops & test coverage |
+| 2 | 🧑‍🤝‍🧑 **Person & Passport** | `11-Feb` | Hibernate · JUnit | One-to-One mapping with separate DAOs & unit tests |
+| 3 | 🎓 **Student Hibernate** | `12-Feb` | Hibernate · JUnit | Student entity with DAO pattern & test suite |
+| 4a | 🧪 **Mockito Testing** | `13-Feb` | Mockito · JUnit | PriceService mocking, stubbing & verification |
+| 4b | 🏠 **Student-Hostel-Aadhar** | `13-Feb` | Hibernate · JUnit | Multi-entity One-to-One mappings (Hostel + Aadhar) |
+| 5a | 🏫 **University System** | `14-Feb` | Hibernate · JUnit | Course, Instructor, Enrollment — multi-relationship model |
+| 5b | 🏥 **Hospital One-to-Many** | `14-Feb` | Hibernate · JUnit | Doctor → Patient → Appointment → MedicalRecord chain |
+| 6 | 📝 **Blog Platform** | `16-Feb` | Hibernate · JUnit | User-Post-Comment system with JPQL queries |
 
 ---
 
