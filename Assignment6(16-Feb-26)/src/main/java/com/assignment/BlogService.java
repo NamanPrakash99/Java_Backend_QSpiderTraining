@@ -7,8 +7,7 @@ public class BlogService {
 
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
 
-    //register User
-    
+    // register User
     public void registerUser(User user){
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -19,7 +18,6 @@ public class BlogService {
 
         em.close();
     }
-    
 
     // create post
     public void createPost(int userId, Post post){
@@ -29,7 +27,7 @@ public class BlogService {
         User user = em.find(User.class, userId);
 
         post.setAuthor(user);
-        post.setCreated_at("2025-01-01 10:00 AM"); 
+        post.setCreated_at("2025-01-01 10:00 AM");
 
         et.begin();
         em.persist(post);
@@ -38,8 +36,7 @@ public class BlogService {
         em.close();
     }
 
-    
-   // Update post
+    // update post
     public void updatePost(int postId, String content){
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -48,14 +45,13 @@ public class BlogService {
 
         et.begin();
         post.setContent(content);
-        post.setUpdated_at("2025-01-02 12:00 PM"); 
+        post.setUpdated_at("2025-01-02 12:00 PM");
         et.commit();
 
         em.close();
     }
 
-    
-    //delete post
+    // delete post
     public void deletePost(int postId){
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -68,7 +64,6 @@ public class BlogService {
 
         em.close();
     }
-    
 
     // add comment
     public void addComment(int userId, int postId, Comment comment){
@@ -80,7 +75,8 @@ public class BlogService {
 
         comment.setAuthor(user);
         comment.setPost(post);
-        comment.setCreated_at("2025-01-03 02:30 PM"); 
+        comment.setCreated_at("2025-01-03 02:30 PM");
+
         et.begin();
         em.persist(comment);
         et.commit();
@@ -88,84 +84,42 @@ public class BlogService {
         em.close();
     }
 
-    
-// Fetch posts by user
-public List<Post> fetchPostsByUser(int userId) {
-    EntityManager em = emf.createEntityManager();
+    // fetch posts by user
+    public List<Post> fetchPostsByUser(int userId) {
+        EntityManager em = emf.createEntityManager();
 
-    Query query = em.createQuery("FROM Post p WHERE p.author.id = ?1");
-    query.setParameter(1, userId);
+        Query query = em.createQuery("FROM Post p WHERE p.author.id = ?1");
+        query.setParameter(1, userId);
 
-    List<Post> list = (List<Post>) query.getResultList();
+        List<Post> list = query.getResultList();
 
-    em.close();
-    return list;
-
-
-// Fetch posts by user
-public List<Post> fetchPostsByUser(int userId) {
-    EntityManager em = emf.createEntityManager();
-
-    Query query = em.createQuery("FROM Post p WHERE p.author.id = ?1");
-    query.setParameter(1, userId);
-
-    List<Post> list = (List<Post>) query.getResultList();
-
-    em.close();
-    return list;
-}
-
-// Find comment by post
-public List<Comment> fetchCommentsByPost(int postId) {
-    EntityManager em = emf.createEntityManager();
-
-    Query query = em.createQuery("FROM Comment c WHERE c.post.id = ?1");
-    query.setParameter(1, postId);
-
-    List<Comment> list = (List<Comment>) query.getResultList();
-
-    em.close();
-    return list;
-}
-
-// Find comment by user
-public List<Comment> fetchCommentsByUser(int userId) {
-    EntityManager em = emf.createEntityManager();
-
-    Query query = em.createQuery("FROM Comment c WHERE c.author.id = ?1");
-    query.setParameter(1, userId);
-
-    List<Comment> list = (List<Comment>) query.getResultList();
-
-    em.close();
-    return list;
+        em.close();
+        return list;
     }
-}
 
-// Find comment by post
-public List<Comment> fetchCommentsByPost(int postId) {
-    EntityManager em = emf.createEntityManager();
+    // fetch comments by post
+    public List<Comment> fetchCommentsByPost(int postId) {
+        EntityManager em = emf.createEntityManager();
 
-    Query query = em.createQuery("FROM Comment c WHERE c.post.id = ?1");
-    query.setParameter(1, postId);
+        Query query = em.createQuery("FROM Comment c WHERE c.post.id = ?1");
+        query.setParameter(1, postId);
 
-    List<Comment> list = (List<Comment>) query.getResultList();
+        List<Comment> list = query.getResultList();
 
-    em.close();
-    return list;
-}
+        em.close();
+        return list;
+    }
 
-// Find comment by user
-public List<Comment> fetchCommentsByUser(int userId) {
-    EntityManager em = emf.createEntityManager();
+    // fetch comments by user
+    public List<Comment> fetchCommentsByUser(int userId) {
+        EntityManager em = emf.createEntityManager();
 
-    Query query = em.createQuery("FROM Comment c WHERE c.author.id = ?1");
-    query.setParameter(1, userId);
+        Query query = em.createQuery("FROM Comment c WHERE c.author.id = ?1");
+        query.setParameter(1, userId);
 
-    List<Comment> list = (List<Comment>) query.getResultList();
+        List<Comment> list = query.getResultList();
 
-    em.close();
-    return list;
-}
-
+        em.close();
+        return list;
+    }
 }
