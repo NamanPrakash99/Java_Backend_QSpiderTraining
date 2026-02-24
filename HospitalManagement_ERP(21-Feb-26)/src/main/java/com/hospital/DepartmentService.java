@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 public class DepartmentService {
 
-    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("hospitalPU");
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
 
     public void create(Department d){
         EntityManager em = emf.createEntityManager();
