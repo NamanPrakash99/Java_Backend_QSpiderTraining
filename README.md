@@ -34,30 +34,6 @@
 
 ---
 
-## 🚀 Major Projects
-
-### 🏥 Hospital Management ERP &nbsp; `21-Feb-2026`
-> Enterprise-grade Hospital ERP system
-
-Full-featured hospital management system with **Department**, **Doctor**, **Patient**, **Appointment**, **MedicalRecord**, and **Prescription** entities. Each entity has its own dedicated service class. Demonstrates complex Many-to-Many and One-to-Many relationships in a real-world domain.
-
-**Tech Stack:** Java • Hibernate • PostgreSQL
-
-<sub>📂 `HospitalManagement_ERP(21-Feb-26)/`</sub>
-
----
-
-### 💼 CRM System (Task-1) &nbsp; `21-Feb-2026`
-> Customer Relationship Management Application
-
-Full CRM system with **Customer**, **Lead**, **SalesEmployee**, **Product**, **Order**, **SupportTicket**, and **Address** entities. Includes services for lead management, order processing, product catalogue, ticket handling, and report generation via **ReportService**.
-
-**Tech Stack:** Java • Hibernate • PostgreSQL
-
-<sub>📂 `TASK-1-CRM(21-Feb-26)/`</sub>
-
----
-
 ## � Project Structure
 
 ```
@@ -73,10 +49,6 @@ Java_Advanced_Training/
 │   ├── 🏥 Assignment5(14-Feb-26)oneTomany/ — Hospital One-to-Many
 │   └── 📝 Assignment6(16-Feb-26)/          — Blog Platform (User-Post-Comment)
 │
-├── 🚀 Major Projects
-│   ├── 🏥 HospitalManagement_ERP(21-Feb-26)/ — Hospital ERP System
-│   └── 💼 TASK-1-CRM(21-Feb-26)/             — CRM Application
-│
 ├── 📚 Learning Modules — Hibernate Mappings
 │   ├── one_to_one_mapping/                 — Car ↔ Engine (Unidirectional)
 │   ├── oneToone_mapping_bidirectional/     — Person ↔ Passport (Bidirectional)
@@ -86,13 +58,15 @@ Java_Advanced_Training/
 │   ├── manyTomany_mapping/                 — Student ↔ Subject (Unidirectional)
 │   └── manyTomanyBidirectional/            — Student ↔ Subject (Bidirectional)
 │
-├── 📚 Learning Modules — Core & Frameworks
+├── 📚 Learning Modules — Core
 │   ├── basicsOfJava/                       — Core Java Foundations
 │   ├── basicsofJdbc/                       — JDBC Fundamentals
 │   ├── learn_jdbc/                         — JDBC Practice & Examples
-│   ├── basics_of_Spring/                   — Spring Framework Basics
-│   ├── class_level_config_BasicSpring/     — Spring Java-based Configuration
 │   └── cachePraticse/                      — Hibernate Caching Strategies
+│
+├── 🌿 branch: spring ─── (Spring Framework projects live in a separate Git branch)
+│   ├── basics_of_Spring/                   — Spring Framework Basics (DI, Beans)
+│   └── class_level_config_BasicSpring/     — Spring Java-based Configuration
 │
 ├── 📚 Learning Modules — Testing
 │   ├── Junit_Testing/                      — JUnit 5 Test Suites
