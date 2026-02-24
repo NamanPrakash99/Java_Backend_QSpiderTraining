@@ -64,7 +64,7 @@ Java_Advanced_Training/
 │   ├── learn_jdbc/                         — JDBC Practice & Examples
 │   └── cachePraticse/                      — Hibernate Caching Strategies
 │
-├── 🌿 branch: spring ─── (Spring Framework projects live in a separate Git branch)
+├── 🌿 branch: spring
 │   ├── basics_of_Spring/                   — Spring Framework Basics (DI, Beans)
 │   └── class_level_config_BasicSpring/     — Spring Java-based Configuration
 │
