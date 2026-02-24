@@ -31,6 +31,9 @@
 | 5a | 🏫 **University System** | `14-Feb` | Hibernate · JUnit | Course, Instructor, Enrollment — multi-relationship model |
 | 5b | 🏥 **Hospital One-to-Many** | `14-Feb` | Hibernate · JUnit | Doctor → Patient → Appointment → MedicalRecord chain |
 | 6 | 📝 **Blog Platform** | `16-Feb` | Hibernate · JUnit | User-Post-Comment system with JPQL queries |
+| 7 | 🏥 **Hospital Management ERP** | `21-Feb` | Hibernate · Spring | Full ERP — Department, Doctor, Patient, Appointment, Prescription, MedicalRecord |
+| T1 | 📊 **CRM System** | `21-Feb` | Hibernate | Customer, Lead, Order, Product, SalesEmployee, SupportTicket management |
+| 8 | 💰 **Fintech Banking** | `23-Feb` | Hibernate | BankAccount, Card, Customer, Transaction — banking CRUD system |
 
 ---
 
@@ -40,43 +43,49 @@
 Java_Advanced_Training/
 │
 ├── 📝 Assignments
-│   ├── 📦 Assignment1(10-Feb-26)/          — Product CRUD (Hibernate + JUnit)
-│   ├── 🧑‍🤝‍🧑 Assignment2(11-Feb-26)/          — Person-Passport One-to-One Mapping
-│   ├── 🎓 Assignment3(12-Feb-26)/          — Student Hibernate DAO
-│   ├── 🧪 Assignment4(13-Feb-26)Mockito/   — Mockito Testing (PriceService)
-│   ├── 🏠 Assignment4(13-Feb-26)hibernate/ — Student-Hostel-Aadhar Mapping
-│   ├── 🏫 Assignment5(14-Feb-26)University/ — University System (Multi-entity)
-│   ├── 🏥 Assignment5(14-Feb-26)oneTomany/ — Hospital One-to-Many
-│   └── 📝 Assignment6(16-Feb-26)/          — Blog Platform (User-Post-Comment)
+│   ├── 📦 Assignment1(10-Feb-26)/            — Product CRUD (Hibernate + JUnit)
+│   ├── 🧑‍🤝‍🧑 Assignment2(11-Feb-26)/            — Person-Passport One-to-One Mapping
+│   ├── 🎓 Assignment3(12-Feb-26)/            — Student Hibernate DAO
+│   ├── 🧪 Assignment4(13-Feb-26)Mockito/     — Mockito Testing (PriceService)
+│   ├── 🏠 Assignment4(13-Feb-26)hibernate/   — Student-Hostel-Aadhar Mapping
+│   ├── 🏫 Assignment5(14-Feb-26)University/  — University System (Multi-entity)
+│   ├── 🏥 Assignment5(14-Feb-26)oneTomany/   — Hospital One-to-Many
+│   ├── 📝 Assignment6(16-Feb-26)/            — Blog Platform (User-Post-Comment)
+│   ├── 🏥 HospitalManagement_ERP(21-Feb-26)/ — Hospital ERP (Full Enterprise System)
+│   └── 💰 Fintech_Assignment(23-Feb-26)/     — Fintech Banking CRUD System
+│
+├── 📋 Tasks
+│   └── 📊 TASK-1-CRM(21-Feb-26)/            — CRM System (Customer, Lead, Order, Sales)
 │
 ├── 📚 Learning Modules — Hibernate Mappings
-│   ├── one_to_one_mapping/                 — Car ↔ Engine (Unidirectional)
-│   ├── oneToone_mapping_bidirectional/     — Person ↔ Passport (Bidirectional)
-│   ├── oneTomany_Mapping/                  — College → Student (Unidirectional)
-│   ├── oneTomany_bidirectional/            — College ↔ Student (Bidirectional)
-│   ├── manyToone_Mapping/                  — Employee → Department
-│   ├── manyTomany_mapping/                 — Student ↔ Subject (Unidirectional)
-│   └── manyTomanyBidirectional/            — Student ↔ Subject (Bidirectional)
+│   ├── one_to_one_mapping/                   — Car ↔ Engine (Unidirectional)
+│   ├── oneToone_mapping_bidirectional/       — Person ↔ Passport (Bidirectional)
+│   ├── oneTomany_Mapping/                    — College → Student (Unidirectional)
+│   ├── oneTomany_bidirectional/              — College ↔ Student (Bidirectional)
+│   ├── manyToone_Mapping/                    — Employee → Department
+│   ├── manyTomany_mapping/                   — Student ↔ Subject (Unidirectional)
+│   └── manyTomanyBidirectional/              — Student ↔ Subject (Bidirectional)
 │
 ├── 📚 Learning Modules — Core
-│   ├── basicsOfJava/                       — Core Java Foundations
-│   ├── basicsofJdbc/                       — JDBC Fundamentals
-│   ├── learn_jdbc/                         — JDBC Practice & Examples
-│   └── cachePraticse/                      — Hibernate Caching Strategies
+│   ├── basicsOfJava/                         — Core Java Foundations
+│   ├── basicsofJdbc/                         — JDBC Fundamentals
+│   ├── learn_jdbc/                           — JDBC Practice & Examples
+│   └── cachePraticse/                        — Hibernate Caching Strategies
 │
-├── 🌿 branch: spring
-│   ├── basics_of_Spring/                   — Spring Framework Basics (DI, Beans)
-│   └── class_level_config_BasicSpring/     — Spring Java-based Configuration
+├── 🌿 Spring
+│   ├── basics_of_Spring/                     — Spring Framework Basics (DI, Beans)
+│   ├── class_level_config_BasicSpring/       — Spring Java-based Configuration
+│   └── spring_Hibernate/                     — Spring + Hibernate Integration (Employee DAO)
 │
 ├── 📚 Learning Modules — Testing
-│   ├── Junit_Testing/                      — JUnit 5 Test Suites
-│   ├── MockitoPractice/                    — Mockito Mocking & Stubbing
-│   └── mockitotest/                        — Mockito UserService Tests
+│   ├── Junit_Testing/                        — JUnit 5 Test Suites
+│   ├── MockitoPractice/                      — Mockito Mocking & Stubbing
+│   └── mockitotest/                          — Mockito UserService Tests
 │
 ├── 📚 Learning Modules — Enterprise
-│   ├── com.capgemini/                      — JDBC Enterprise CRUD Operations
-│   ├── hibernate_basics/                   — Hibernate ORM Introduction
-│   └── product_hibernate/                  — Advanced Hibernate DAO Patterns
+│   ├── com.capgemini/                        — JDBC Enterprise CRUD Operations
+│   ├── hibernate_basics/                     — Hibernate ORM Introduction
+│   └── product_hibernate/                    — Advanced Hibernate DAO Patterns
 │
 └── README.md
 ```
