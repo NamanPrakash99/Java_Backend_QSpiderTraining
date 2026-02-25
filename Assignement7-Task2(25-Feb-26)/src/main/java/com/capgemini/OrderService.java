@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderService {
 
-    private final NotificationService notificationService;
+    private NotificationService notificationService;
 
     // Field Injection
     @Autowired

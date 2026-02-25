@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Lazy
 public class CreditCardPayment implements PaymentService {
 
-	private final TransactionLogger logger;
+	private TransactionLogger logger;
 
 	public CreditCardPayment(TransactionLogger logger) {
 		this.logger = logger;
