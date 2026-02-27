@@ -37,7 +37,9 @@
 | F1 | 💰 **Fintech Banking** | `23-Feb` | Hibernate | BankAccount, Card, Customer, Transaction — banking CRUD system |
 | 7a | 💳 **Payment System (DI)** | `25-Feb` | Spring | Spring DI — Constructor, Field & Qualifier injection with TransactionLogger |
 | 7b | 🍔 **Food Delivery (DI)** | `25-Feb` | Spring | Spring DI — Order, Notification, Delivery with Scopes & Lifecycle hooks |
-| 8 | 🛒 **Product-Category API** | `26-Feb` | Spring Boot | REST API — Product & Category CRUD with Global Exception Handling |
+| 7c | 🏦 **Loan Application (DI)** | `25-Feb` | Spring | Spring DI — Loan validation & Audit service with Bean configuration |
+| 8 | 🛒 **Product-Category API** | `26-Feb` | Spring Boot | REST API — Product & Category CRUD with Repository & Service layers |
+| 9 | 🌐 **Spring MVC Demo** | `27-Feb` | Spring Boot | Spring MVC with JPA Repository — User management demo |
 
 ---
 
@@ -57,6 +59,7 @@ Java_Advanced_Training/
 │   ├── 📝 Assignment6(16-Feb-26)/            — Blog Platform (User-Post-Comment)
 │   ├── 💳 Assignment7-Task1(25-Feb-26)/      — Spring DI Payment System
 │   ├── 🍔 Assignement7-Task2(25-Feb-26)/     — Spring DI Food Delivery System
+│   ├── 🏦 Assignment7-Task3(25-Feb-26)/      — Spring DI Loan Application System
 │   ├── 🛒 Assignment8-customer-Product-26-Feb/— Spring Boot Product-Category REST API
 │   ├── 🏥 HospitalManagement_ERP(21-Feb-26)/ — Hospital ERP (Full Enterprise System)
 │   └── 💰 Fintech_Assignment(23-Feb-26)/     — Fintech Banking CRUD System
@@ -84,6 +87,7 @@ Java_Advanced_Training/
 │   ├── class_level_config_BasicSpring/       — Spring Java-based Configuration
 │   ├── spring_Hibernate/                     — Spring + Hibernate Integration (Employee DAO)
 │   ├── springmvc/                            — Spring MVC Web Application
+│   ├── springmvcboot/                        — Spring Boot MVC + JPA Repository (User Management)
 │   └── springbootbasic/                      — Spring Boot Basics (JPA Derived Queries, REST)
 │
 ├── 📚 Learning Modules — Testing
