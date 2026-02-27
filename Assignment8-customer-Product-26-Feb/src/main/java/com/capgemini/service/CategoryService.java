@@ -9,7 +9,6 @@ import com.capgemini.dto.Category;
 import com.capgemini.exception.CategoryNotFound;
 import com.capgemini.repo.CategoryRepository;
 
-@Service
 public class CategoryService {
 
     private final CategoryRepository categoryRepository;
