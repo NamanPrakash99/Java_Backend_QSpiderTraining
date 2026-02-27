@@ -9,6 +9,7 @@ import com.capgemini.dto.Category;
 import com.capgemini.exception.CategoryNotFound;
 import com.capgemini.repo.CategoryRepository;
 
+@Component
 public class CategoryService {
 
     private final CategoryRepository categoryRepository;
@@ -63,5 +64,12 @@ public class CategoryService {
 
         Category category = getCategoryById(id);
         categoryRepository.delete(category);
+    }
+
+    
+    // Pagination and sorting in w.r.t to id in descending
+    public List<Category> getCategoryPage(int page, int size) {
+         Page<Category> p=categoryRepository.findAll(PageRequest.of(page, size,Sort.by("categoryId").descending()));
+         return p.getContent();
     }
 }

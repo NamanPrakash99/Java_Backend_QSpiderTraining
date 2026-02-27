@@ -10,29 +10,33 @@ import com.capgemini.service.CategoryService;
 @RequestMapping("/category")
 public class CategoryController {
 
-    private final CategoryService categoryService;
+    private final CategoryService categoryjpa;
 
-    public CategoryController(CategoryService categoryService) {
-        this.categoryService = categoryService;
+    public CategoryController(CategoryService categoryjpa) {
+        this.categoryjpa = categoryjpa;
     }
 
     @PostMapping("/save")
     public Category saveCategory(@RequestBody Category category) {
-        return categoryService.createCategory(category);
+        return categoryjpa.createCategory(category);
     }
 
     @GetMapping("/find-all")
     public List<Category> findAllCategories() {
-        return categoryService.getAllCategories();
+        return categoryjpa.getAllCategories();
     }
 
     @GetMapping("/find-id/{id}")
     public Category findCategoryById(@PathVariable Long id) {
-        return categoryService.getCategoryById(id);
+        return categoryjpa.getCategoryById(id);
     }
 
     @DeleteMapping("/delete-id/{id}")
     public void deleteCategory(@PathVariable Long id) {
-        categoryService.deleteCategory(id);
+        categoryjpa.deleteCategory(id);
     }
+     @GetMapping("/page/{page}/{size}")
+	    public List<Category> getCategoryPage(@PathVariable int page, @PathVariable int size) {
+	        return categoryjpa.getCategoryPage(page, size);
+	    }
 }

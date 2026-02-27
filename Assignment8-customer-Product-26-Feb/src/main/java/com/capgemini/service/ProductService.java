@@ -12,6 +12,7 @@ import com.capgemini.exception.CategoryNotFound;
 import com.capgemini.repo.CategoryRepository;
 import com.capgemini.repo.ProductRepository;
 
+@Component
 public class ProductService {
 
     private final ProductRepository productRepository;
