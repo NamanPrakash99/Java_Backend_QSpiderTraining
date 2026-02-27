@@ -3,8 +3,9 @@ package com.capgemini.springbootbasic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 
-import jakarta.persistence.EntityManagerFactory;
+import io.swagger.v3.oas.models.OpenAPI;
 
 @SpringBootApplication
 public class SpringbootbasicApplication {
@@ -18,6 +19,11 @@ public class SpringbootbasicApplication {
 //		EntityManagerFactory emf = ioc.getBean(EntityManagerFactory.class);
 //		System.out.println(emf);
 		
+		
+//		@Bean
+//		public OpenAPI getOpenAPI() {
+//			return new OpenAPI();
+//		}
 		
 	}
 
