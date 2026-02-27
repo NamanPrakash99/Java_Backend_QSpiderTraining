@@ -14,7 +14,6 @@ public class CategoryService {
 
     private final CategoryRepository categoryRepository;
 
-    // constructor Injection
     public CategoryService(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
