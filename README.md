@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven">
   <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" alt="Hibernate">
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring">
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot">
   <img src="https://img.shields.io/badge/JUnit_5-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit">
   <img src="https://img.shields.io/badge/Mockito-78A641?style=for-the-badge" alt="Mockito">
   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
@@ -33,9 +34,10 @@
 | 6 | 📝 **Blog Platform** | `16-Feb` | Hibernate · JUnit | User-Post-Comment system with JPQL queries |
 | 7 | 🏥 **Hospital Management ERP** | `21-Feb` | Hibernate · Spring | Full ERP — Department, Doctor, Patient, Appointment, Prescription, MedicalRecord |
 | T1 | 📊 **CRM System** | `21-Feb` | Hibernate | Customer, Lead, Order, Product, SalesEmployee, SupportTicket management |
-| 8 | 💰 **Fintech Banking** | `23-Feb` | Hibernate | BankAccount, Card, Customer, Transaction — banking CRUD system |
+| F1 | 💰 **Fintech Banking** | `23-Feb` | Hibernate | BankAccount, Card, Customer, Transaction — banking CRUD system |
 | 7a | 💳 **Payment System (DI)** | `25-Feb` | Spring | Spring DI — Constructor, Field & Qualifier injection with TransactionLogger |
 | 7b | 🍔 **Food Delivery (DI)** | `25-Feb` | Spring | Spring DI — Order, Notification, Delivery with Scopes & Lifecycle hooks |
+| 8 | 🛒 **Product-Category API** | `26-Feb` | Spring Boot | REST API — Product & Category CRUD with Global Exception Handling |
 
 ---
 
@@ -55,6 +57,7 @@ Java_Advanced_Training/
 │   ├── 📝 Assignment6(16-Feb-26)/            — Blog Platform (User-Post-Comment)
 │   ├── 💳 Assignment7-Task1(25-Feb-26)/      — Spring DI Payment System
 │   ├── 🍔 Assignement7-Task2(25-Feb-26)/     — Spring DI Food Delivery System
+│   ├── 🛒 Assignment8-customer-Product-26-Feb/— Spring Boot Product-Category REST API
 │   ├── 🏥 HospitalManagement_ERP(21-Feb-26)/ — Hospital ERP (Full Enterprise System)
 │   └── 💰 Fintech_Assignment(23-Feb-26)/     — Fintech Banking CRUD System
 │
@@ -80,7 +83,8 @@ Java_Advanced_Training/
 │   ├── basics_of_Spring/                     — Spring Framework Basics (DI, Beans)
 │   ├── class_level_config_BasicSpring/       — Spring Java-based Configuration
 │   ├── spring_Hibernate/                     — Spring + Hibernate Integration (Employee DAO)
-│   └── springmvc/                            — Spring MVC Web Application
+│   ├── springmvc/                            — Spring MVC Web Application
+│   └── springbootbasic/                      — Spring Boot Basics (JPA Derived Queries, REST)
 │
 ├── 📚 Learning Modules — Testing
 │   ├── Junit_Testing/                        — JUnit 5 Test Suites
@@ -105,6 +109,7 @@ Java_Advanced_Training/
 | **Relationship Mappings** | One-to-One (Uni & Bi), One-to-Many (Uni & Bi), Many-to-One, Many-to-Many (Uni & Bi) |
 | **JDBC** | DriverManager, PreparedStatement, ResultSet, Connection Pooling |
 | **Spring Framework** | Bean Configuration (XML & Java-based), Dependency Injection, Component Scanning, Qualifier, Scopes, Lifecycle Hooks, Spring MVC |
+| **Spring Boot** | REST Controllers, JPA Repositories, Derived Query Methods, Global Exception Handling, Service Layer Architecture |
 | **Testing** | JUnit 5 (Assertions, Lifecycle Hooks), Mockito (Mocking, Stubbing, Verification) |
 | **Design Patterns** | DAO Pattern, Service Layer, Entity Relationships, Configuration Management |
 
