@@ -28,19 +28,16 @@ public class LoanService {
     @Autowired
     private MemberRepository memberRepository;
 
-    // Get all loans
     public List<Loan> getAllLoans() {
         return loanRepository.findAll();
     }
 
-    // Get loan by ID
     public Loan getLoanById(Long id) {
         return loanRepository.findById(id)
                 .orElseThrow(() ->
                         new ResourceNotFoundException("Loan not found with id: " + id));
     }
 
-    // Issue book
     @Transactional
     public Loan issueBook(Long memberId, Long bookId, LocalDate dueDate) {
 
@@ -68,7 +65,6 @@ public class LoanService {
         return loanRepository.save(loan);
     }
 
-    // Return book
     @Transactional
     public Loan returnBook(Long loanId) {
 
@@ -94,7 +90,6 @@ public class LoanService {
         return loanRepository.save(loan);
     }
 
-    // Get all loans of a member
     public List<Loan> getLoansByMember(Long memberId) {
 
         memberRepository.findById(memberId)
