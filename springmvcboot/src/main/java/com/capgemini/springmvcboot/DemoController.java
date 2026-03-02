@@ -1,17 +1,23 @@
 package com.capgemini.springmvcboot;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class DemoController {
 	
 	@Autowired
-	JpaRepository userjpa;
+	UsersJpaRepository jpa;
 	
 	@GetMapping("/hello")
 	public String getHi() {
@@ -43,8 +49,45 @@ public class DemoController {
 //		System.out.println(users.getEmail());
 //		System.out.println(users.getName());
 //		System.out.println(users.getNumber());
-		userjpa.save(users);
+		jpa.save(users);
 		
 		return "success";
+	}
+	
+	@GetMapping("/login")
+	public String login() {
+	    return "login";
+	}
+	
+	@GetMapping("/logincheck")
+	public String logincheck(HttpServletRequest request) {
+		String email=request.getParameter("email");
+		String password=request.getParameter("password");
+		
+		Users user=jpa.findByEmailAndPassword(email,password);
+		if(user!=null) {
+			return "loginsuccess";
+		}else {
+			return "redirect:/login";
+		}
+
+	}
+	
+//	@GetMapping("/hi")
+//	public ModelAndView sendData() {
+//		ModelAndView m=new ModelAndView();
+//		m.addObject("msg", "Miller");
+//		m.setViewName("abc");
+//		return m;
+//	}
+	
+	
+	@GetMapping("/hi")
+	public ModelAndView sendData() {
+		ModelAndView m=new ModelAndView();
+		List<String> names=List.of("Miller","Naman","Ravi");
+		m.addObject("msg", names);
+		m.setViewName("abc");
+		return m;
 	}
 }

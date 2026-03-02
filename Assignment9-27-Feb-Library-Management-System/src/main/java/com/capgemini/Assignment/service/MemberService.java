@@ -15,25 +15,21 @@ public class MemberService {
     @Autowired
     private MemberRepository memberRepository;
 
-    // Get all members
     public List<Member> getAllMembers() {
         return memberRepository.findAll();
     }
 
-    // Get member by ID
     public Member getMemberById(Long id) {
         return memberRepository.findById(id)
                 .orElseThrow(() ->
                         new ResourceNotFoundException("Member not found with id: " + id));
     }
 
-    // Create member
     public Member addMember(Member member) {
         member.setStatus("ACTIVE");   // default status
         return memberRepository.save(member);
     }
 
-    // Update member
     public Member updateMember(Long id, Member member) {
         Member existing = getMemberById(id);
 
@@ -46,7 +42,6 @@ public class MemberService {
         return memberRepository.save(existing);
     }
 
-    // Block (soft delete) member
     public void deleteOrDisableMember(Long id) {
         Member existing = getMemberById(id);
         existing.setStatus("BLOCKED");
