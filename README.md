@@ -39,7 +39,9 @@
 | 7b | 🍔 **Food Delivery (DI)** | `25-Feb` | Spring | Spring DI — Order, Notification, Delivery with Scopes & Lifecycle hooks |
 | 7c | 🏦 **Loan Application (DI)** | `25-Feb` | Spring | Spring DI — Loan validation & Audit service with Bean configuration |
 | 8 | 🛒 **Product-Category API** | `26-Feb` | Spring Boot | REST API — Product & Category CRUD with Repository & Service layers |
-| 9 | 🌐 **Spring MVC Demo** | `27-Feb` | Spring Boot | Spring MVC with JPA Repository — User management demo |
+| 9 | 📚 **Library Mgmt System** | `27-Feb` | Spring Boot · Data JPA | Relational mappings (Book, Author, Member, Loan) with DAO pattern |
+| 10 | 🔗 **URL Shortener** | `28-Feb` | Spring Boot · OpenAPI | RESTful service with redirection, Swagger UI & JPA persistence |
+| 12 | 📅 **Event Announcement** | `06-Mar` | Spring Boot · Security | Role-based access control (RBAC) for event management & security configs |
 
 ---
 
@@ -62,7 +64,10 @@ Java_Advanced_Training/
 │   ├── 🏦 Assignment7-Task3(25-Feb-26)/      — Spring DI Loan Application System
 │   ├── 🛒 Assignment8-customer-Product-26-Feb/— Spring Boot Product-Category REST API
 │   ├── 🏥 HospitalManagement_ERP(21-Feb-26)/ — Hospital ERP (Full Enterprise System)
-│   └── 💰 Fintech_Assignment(23-Feb-26)/     — Fintech Banking CRUD System
+│   ├── 💰 Fintech_Assignment(23-Feb-26)/     — Fintech Banking CRUD System
+│   ├── 📚 Assignment9-27-Feb-Library-System/ — Library Management (Relational Mappings)
+│   ├── 🔗 Assignment10(Url-Shortner)28-Feb/  — URL Shortener Service (OpenAPI/Swagger)
+│   └── 📅 Assignment12-Event-Annoucement/    — Event Announcement (Spring Security)
 │
 ├── 📋 Tasks
 │   └── 📊 TASK-1-CRM(21-Feb-26)/            — CRM System (Customer, Lead, Order, Sales)
@@ -87,8 +92,14 @@ Java_Advanced_Training/
 │   ├── class_level_config_BasicSpring/       — Spring Java-based Configuration
 │   ├── spring_Hibernate/                     — Spring + Hibernate Integration (Employee DAO)
 │   ├── springmvc/                            — Spring MVC Web Application
-│   ├── springmvcboot/                        — Spring Boot MVC + JPA Repository (User Management)
-│   └── springbootbasic/                      — Spring Boot Basics (JPA Derived Queries, REST)
+│   ├── springmvcboot/                        — Spring Boot MVC + JPA Repository
+│   ├── basicsofspringbootmvc/                — Advanced Spring Boot MVC Modules
+│   └── springbootbasic/                      — Spring Boot Basics (JPA, REST)
+│
+├── 🛡️ Spring Security
+│   ├── springsecuritydemo/                  — Spring Security Fundamentals (RBAC)
+│   ├── springsecuritydbconnection/          — Database Authentication & AuthZ
+│   └── cors/                                 — Cross-Origin Resource Sharing Config
 │
 ├── 📚 Learning Modules — Testing
 │   ├── Junit_Testing/                        — JUnit 5 Test Suites
@@ -113,8 +124,9 @@ Java_Advanced_Training/
 | **Relationship Mappings** | One-to-One (Uni & Bi), One-to-Many (Uni & Bi), Many-to-One, Many-to-Many (Uni & Bi) |
 | **JDBC** | DriverManager, PreparedStatement, ResultSet, Connection Pooling |
 | **Spring Framework** | Bean Configuration (XML & Java-based), Dependency Injection, Component Scanning, Qualifier, Scopes, Lifecycle Hooks, Spring MVC |
-| **Spring Boot** | REST Controllers, JPA Repositories, Derived Query Methods, Global Exception Handling, Service Layer Architecture |
+| **Spring Boot** | REST Controllers, JPA Repositories, OpenAPI/Swagger, Derived Query Methods, Exception Handling |
 | **Testing** | JUnit 5 (Assertions, Lifecycle Hooks), Mockito (Mocking, Stubbing, Verification) |
+| **Security** | Authentication, RBAC (Role-Based Access Control), Password Encoding, CORS Config |
 | **Design Patterns** | DAO Pattern, Service Layer, Entity Relationships, Configuration Management |
 
 ---
