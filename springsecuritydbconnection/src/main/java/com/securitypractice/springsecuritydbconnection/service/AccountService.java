@@ -3,6 +3,7 @@ package com.securitypractice.springsecuritydbconnection.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -76,6 +77,7 @@ public class AccountService {
 		return dto;
 	}
 	
+	@PostAuthorize("hasRole('ADMIN') or returnObject.username == authentication.name")
 	public AccountResponseDTO getById(long id) {
 		Account a=jpa.findById(id).orElseThrow(()->new RuntimeException("Id not found"));
 		
@@ -135,6 +137,8 @@ public class AccountService {
 
 	    return toResponse(account);
 	}
+	
+
 	
 	
 }

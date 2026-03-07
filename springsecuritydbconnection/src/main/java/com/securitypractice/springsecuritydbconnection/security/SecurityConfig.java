@@ -23,9 +23,14 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filter(HttpSecurity http) throws Exception {
 		return http
-				.cors(cors->{})          // if u want to allow to connect frontend security 
+				.cors(cors->{})          // if u want to allow to connect frontend security by default enable
 				.csrf(csrf -> csrf.disable())
-				.authorizeHttpRequests(auth -> auth
+				.authorizeHttpRequests(auth -> auth 
+						.requestMatchers(
+	                            "/swagger-ui/**",
+	                            "/swagger-ui.html",
+	                            "/v3/api-docs/**"
+	                    ).permitAll()
 						.requestMatchers("/actuator/beans","/actuator/sessions").hasRole("ADMIN")
 						.requestMatchers("/public/**").permitAll()
 						.requestMatchers("/actuator/**").permitAll()
