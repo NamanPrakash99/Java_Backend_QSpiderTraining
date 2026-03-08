@@ -43,7 +43,7 @@
 | 10 | 🔗 **URL Shortener** | `28-Feb` | Spring Boot · OpenAPI | RESTful service with redirection, Swagger UI & JPA persistence |
 | 11 | ✅ **TaskTrack Manager** | `05-Mar` | Spring Boot · JSP | To-Do manager with image upload, form validation & professional JSP UI |
 | 12 | 📅 **Event Announcement** | `06-Mar` | Spring Boot · Security | Role-based access control (RBAC) for event management & security configs |
-| 13 | 📚 **Library System (Secure)** | `07-Mar` | Spring Boot · Security | Secure REST API with Basic Auth, JPA transactional borrowing & OpenAPI documentation |
+| 13 | 📚 **Spring Boot for Beginners** | `07-Mar` | Spring Boot · Security | Secure REST API with Basic Auth, JPA transactional borrowing & OpenAPI documentation |
 
 ---
 
