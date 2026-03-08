@@ -43,10 +43,11 @@
 | 10 | 🔗 **URL Shortener** | `28-Feb` | Spring Boot · OpenAPI | RESTful service with redirection, Swagger UI & JPA persistence |
 | 11 | ✅ **TaskTrack Manager** | `05-Mar` | Spring Boot · JSP | To-Do manager with image upload, form validation & professional JSP UI |
 | 12 | 📅 **Event Announcement** | `06-Mar` | Spring Boot · Security | Role-based access control (RBAC) for event management & security configs |
+| 13 | 📚 **Library System (Secure)** | `07-Mar` | Spring Boot · Security | Secure REST API with Basic Auth, JPA transactional borrowing & OpenAPI documentation |
 
 ---
 
-## � Project Structure
+## 📂 Project Structure
 
 ```
 Java_Advanced_Training/
@@ -69,7 +70,8 @@ Java_Advanced_Training/
 │   ├── 📚 Assignment9-27-Feb-Library-System/ — Library Management (Relational Mappings)
 │   ├── 🔗 Assignment10(Url-Shortner)28-Feb/  — URL Shortener Service (OpenAPI/Swagger)
 │   ├── ✅ Assignment11-TaskTracker-05-03-26/ — TaskTrack To-Do Application (JSP/Validation)
-│   └── 📅 Assignment12-Event-Annoucement/    — Event Announcement (Spring Security)
+│   ├── 📅 Assignment12-Event-Annoucement/    — Event Announcement (Spring Security)
+│   └── 📚 Assignment13SpringBoot-07-03-26/   — Library Management System (Basic Auth + JPA)
 │
 ├── 📋 Tasks
 │   └── 📊 TASK-1-CRM(21-Feb-26)/            — CRM System (Customer, Lead, Order, Sales)
