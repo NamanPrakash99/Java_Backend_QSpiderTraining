@@ -3,12 +3,12 @@ package com.capgemini.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import com.capgemini.dto.Category;
 import com.capgemini.dto.Product;
-import com.capgemini.exception.ProductNotFound;
 import com.capgemini.exception.CategoryNotFound;
+import com.capgemini.exception.ProductNotFound;
 import com.capgemini.repo.CategoryRepository;
 import com.capgemini.repo.ProductRepository;
 

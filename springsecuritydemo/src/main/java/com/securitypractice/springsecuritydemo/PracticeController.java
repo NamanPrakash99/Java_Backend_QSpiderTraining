@@ -1,15 +1,15 @@
 package com.securitypractice.springsecuritydemo;
 
+import org.springframework.security.web.csrf.CsrfToken;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@CrossOrigin(origins="http://localhost:3000")
 public class PracticeController {
 	
-	@GetMapping("/practice")
+	@GetMapping("/public")
 	public String getDetails() {
 		return "Details";
 	}
@@ -22,5 +22,10 @@ public class PracticeController {
 	@GetMapping("/admin")
 	public String deleteUser() {
 		return "Delete";
+	}
+	
+	@GetMapping("/csfr-token")
+	public CsrfToken  getCsrf(CsrfToken token) {
+		return token;
 	}
 }

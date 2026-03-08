@@ -40,9 +40,11 @@ public class SecurityConfig {
 		
 		// singleton
 		// builder design pattern(as per requirement u are creating the object)
-		return http.csrf(csrf->csrf.disable())
+		return http
+//				.csrf(csrf->csrf.disable())
 				.authorizeHttpRequests(auth->auth
 				.requestMatchers("/public").permitAll()
+				.requestMatchers("/csrf-token").permitAll()
 				.requestMatchers("/practice").permitAll()
 				//.requestMatchers("/admin").authenticated()
 				.requestMatchers("/admin").hasRole("USER"))

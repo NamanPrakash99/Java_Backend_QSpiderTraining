@@ -3,7 +3,10 @@ package com.capgemini.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Component;
 
 import com.capgemini.dto.Category;
 import com.capgemini.exception.CategoryNotFound;
