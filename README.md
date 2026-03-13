@@ -11,6 +11,7 @@
   <img src="https://img.shields.io/badge/JUnit_5-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit">
   <img src="https://img.shields.io/badge/Mockito-78A641?style=for-the-badge" alt="Mockito">
   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Active">
 </p>
 
@@ -44,6 +45,7 @@
 | 11 | ✅ **TaskTrack Manager** | `05-Mar` | Spring Boot · JSP | To-Do manager with image upload, form validation & professional JSP UI |
 | 12 | 📅 **Event Announcement** | `06-Mar` | Spring Boot · Security | Role-based access control (RBAC) for event management & security configs |
 | 13 | 📚 **Spring Boot for Beginners** | `07-Mar` | Spring Boot · Security | Secure REST API with Basic Auth, JPA transactional borrowing & OpenAPI documentation |
+| 14 | 🎓 **Student Management System** | `09-Mar` | Spring Boot · Security | REST API with student records, file upload, pagination, caching, RBAC & Actuator monitoring |
 
 ---
 
@@ -71,7 +73,8 @@ Java_Advanced_Training/
 │   ├── 🔗 Assignment10(Url-Shortner)28-Feb/  — URL Shortener Service (OpenAPI/Swagger)
 │   ├── ✅ Assignment11-TaskTracker-05-03-26/ — TaskTrack To-Do Application (JSP/Validation)
 │   ├── 📅 Assignment12-Event-Annoucement/    — Event Announcement (Spring Security)
-│   └── 📚 Assignment13SpringBoot-07-03-26/   — Library Management System (Basic Auth + JPA)
+│   ├── 📚 Assignment13SpringBootSecurity-07-03-26/ — Library Management System (Basic Auth + JPA)
+│   └── 🎓 Assignment14-SMS-09-03-26/         — Student Management System REST API
 │
 ├── 📋 Tasks
 │   └── 📊 TASK-1-CRM(21-Feb-26)/            — CRM System (Customer, Lead, Order, Sales)
@@ -113,7 +116,8 @@ Java_Advanced_Training/
 ├── 📚 Learning Modules — Enterprise
 │   ├── com.capgemini/                        — JDBC Enterprise CRUD Operations
 │   ├── hibernate_basics/                     — Hibernate ORM Introduction
-│   └── product_hibernate/                    — Advanced Hibernate DAO Patterns
+│   ├── product_hibernate/                    — Advanced Hibernate DAO Patterns
+│   └── Docker_prac/                          — Docker Containerization Practice
 │
 └── README.md
 ```
